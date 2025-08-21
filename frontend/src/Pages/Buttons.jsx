@@ -1,6 +1,6 @@
 // src/Pages/Buttons.jsx
 import React from "react";
-import { useButtonContext } from "../context/ButtonContext";
+import { useButtonContext } from "../Context/ButtonContext";
 import "./Buttons.css";
 
 // Basic Button Components
