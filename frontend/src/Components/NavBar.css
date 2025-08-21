@@ -1,0 +1,382 @@
+/* NavBar.css - Minimal Light Theme */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+  padding: 0 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #E5E7EB;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navigation Toggle Button */
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.sidebar-toggle-btn {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle-btn:hover {
+  background: rgba(37, 99, 235, 0.2);
+  transform: scale(1.05);
+  border-color: #2563EB;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar-toggle-btn:focus {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
+}
+
+.sidebar-toggle-btn:active {
+  transform: scale(0.95);
+  background: rgba(37, 99, 235, 0.3);
+}
+
+/* Hamburger Icon in NavBar */
+.hamburger-nav {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-nav span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #2563EB;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-nav.minimized span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-nav.minimized span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-nav.minimized span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Legacy hamburger styles (if still used somewhere) */
+.sidebar-toggle {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-toggle:hover {
+  background: rgba(37, 99, 235, 0.2);
+  transform: scale(1.05);
+  border-color: #2563EB;
+}
+
+.hamburger {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #2563EB;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.minimized span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.minimized span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.minimized span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Logo Section */
+.logosection {
+  margin: 0;
+}
+
+.logosection p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2563EB;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(45deg, #2563EB, #9333EA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.logosection:hover p {
+  text-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Center Section */
+.nav-center {
+  flex: 1;
+  text-align: center;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2563EB;
+  margin: 0 0 4px 0;
+  text-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6B7280;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Section */
+.searchsection {
+  margin-right: 20px;
+}
+
+.searchsection input {
+  padding: 10px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 25px;
+  background: #FFFFFF;
+  color: #111827;
+  font-size: 14px;
+  width: 200px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.searchsection input::placeholder {
+  color: #6B7280;
+}
+
+.searchsection input:focus {
+  outline: none;
+  background: #F9FAFB;
+  border-color: #2563EB;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  width: 250px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 10px 18px;
+  color: #6B7280;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: #F9FAFB;
+  backdrop-filter: blur(10px);
+  border: 1px solid #E5E7EB;
+}
+
+.nav-menu a:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563EB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.nav-menu a.active {
+  background: linear-gradient(135deg, #2563EB, #9333EA);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  font-weight: 600;
+  border-color: #2563EB;
+}
+
+.nav-menu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #2563EB;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+}
+
+.nav-menu a.active:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+/* Glow effect on hover */
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+  transition: left 0.5s ease;
+  border-radius: 25px;
+}
+
+.nav-menu a:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+    padding: 0 15px;
+  }
+  
+  .nav-toggle {
+    order: -1;
+    margin-right: 10px;
+  }
+  
+  .sidebar-toggle-btn {
+    padding: 6px;
+  }
+  
+  .hamburger-nav {
+    width: 18px;
+    height: 13px;
+  }
+  
+  .nav-center {
+    display: none;
+  }
+  
+  .searchsection {
+    display: none;
+  }
+  
+  .nav-menu {
+    gap: 5px;
+  }
+  
+  .nav-menu a {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .logosection p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-left {
+    gap: 10px;
+  }
+  
+  .nav-toggle {
+    margin-right: 8px;
+  }
+  
+  .logosection p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional Minimal Light Theme Enhancements */
+.nav-menu a:not(.active):hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+/* Subtle animation for the entire navbar */
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.05), transparent);
+  animation: nav-shimmer 8s linear infinite;
+}
+
+@keyframes nav-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+/* App.css - Add these styles */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+}
+
+/* Main content transitions */
+.main-content {
+  flex: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: calc(100vh - 70px); /* Adjust based on navbar height */
+}
+
+/* When sidebar is expanded */
+.main-content.sidebar-expanded {
+  margin-left: 280px; /* Same as sidebar width */
+}
+
+/* When sidebar is minimized */
+.main-content.sidebar-minimized {
+  margin-left: 70px; /* Same as minimized sidebar width */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .main-content.sidebar-expanded {
+    margin-left: 0; /* On mobile, content takes full width */
+  }
+  
+  .main-content.sidebar-minimized {
+    margin-left: 60px; /* Smaller minimized width on mobile */
+  }
+}
+
+/* Optional: Add overlay for mobile */
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 899;
+    display: none;
+  }
+  
+  .sidebar-overlay.show {
+    display: block;
+  }
+}
